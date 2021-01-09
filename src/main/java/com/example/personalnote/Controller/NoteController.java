@@ -11,7 +11,6 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@CrossOrigin("*")
 public class NoteController {
 
 
@@ -21,9 +20,9 @@ public class NoteController {
 
     /* this method save the notes */
     @PostMapping("/note")
-    public String saveNote(@Valid @RequestBody Note patient) {
+    public Note saveNote(@Valid @RequestBody Note patient) {
 
-        return noteService.createNote(patient).getId();
+        return noteService.createNote(patient);
     }
 
     /* this method update the note */
@@ -35,9 +34,12 @@ public class NoteController {
 
     /* this delete the note for specific user and specific id */
     @DeleteMapping("/note/{id}/{userId}")
-    public Long deleteNote(@PathVariable("id") String id, @PathVariable("userId") Long userId) {
+    public ResponseEntity<?> deleteNote(@PathVariable("id") String id, @PathVariable("userId") Long userId) {
 
-        return noteService.deleteNote(id, userId);
+        if(noteService.deleteNote(id, userId)==1){
+            return ResponseEntity.status(HttpStatus.ACCEPTED).build();
+        }
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 
     /* this method update the note */
