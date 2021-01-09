@@ -1,9 +1,9 @@
 package com.example.personalnote.Controller;
 
 import com.example.personalnote.Model.Note;
-import com.example.personalnote.Repository.NoteRepository;
 import com.example.personalnote.service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
