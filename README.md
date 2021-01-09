@@ -43,7 +43,7 @@ response:</br>
 }</br>
 
 
-* #### Update Previously save note
+* #### Update previously saved note
 
 api:http://localhost:8080/note/{noteId}/{userId}</br>
 example : http://localhost:8080/note/5ff930903a6c934cc0d47060/3</br>
@@ -64,7 +64,7 @@ response</br>
     "archive": "no"</br>
 }</br>
 
-* #### Delete save Note</br>
+* #### Delete saved note</br>
 
 api:http://localhost:8080/note/{noteId}/{userId}</br>
 example : http://localhost:8080/note/5ff930903a6c934cc0d47060/3</br>
@@ -81,7 +81,7 @@ Status 202 Accepted</br>
 
 
 
-* #### Archive and Unarchive Note</br>
+* #### Archive and unarchive note</br>
 
 api:http://localhost:8080/note/{noteId}/{userId}/{archiveFlag}</br>
 
