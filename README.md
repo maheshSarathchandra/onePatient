@@ -190,7 +190,7 @@ therefore it can be used to further development as well in this project
 
 ## Considering Further improvement
 * it should be added authentication for the apis
-* unit test cases shoud be added(Spring boot test using mock beens)
-* futher been configuration because of autowiring is not best practic in been inject
+* unit test cases shoud be added(Spring boot test using mock beans)
+* futher bean configuration because of autowiring is not best practic in bean inject
 * error handling shoud be done  using custom error handlers
 * considering expand ,the system should be expand for different type of note(with hashtag,numbers,large size, file that is included many notes)
